@@ -23,7 +23,7 @@
         android:layout_gravity="center"
         android:textSize="36sp"
         android:letterSpacing="0.1"
-        android:text="{@gameViewModel.secretWordDisplay}" />
+        android:text="@{gameViewModel.secretWordDisplay}" />
     <TextView
         android:id="@+id/lives"
         android:layout_width="wrap_content"
@@ -40,7 +40,7 @@
         android:id="@+id/guess"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:hint="@string/guess_letter"
         android:inputType="text"
         android:maxLength="1" />
@@ -50,5 +50,12 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/guess" />
+    <Button
+        android:id="@+id/finish_game_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/finish_game"
+        android:onClick="@{ () -> gameViewModel.finishGame()}" />
 </LinearLayout>
     </layout>
